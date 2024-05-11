@@ -112,7 +112,7 @@ func GetRenderedConfFromDefaultConf(remote_Port int) (out []byte, err error) {
 	b := bytes.NewBuffer(nil)
 
 	fmt.Fprintf(b, `[common]
-
+protocol = kcp
 tls_enable = true
 [socks5]
 type = tcp

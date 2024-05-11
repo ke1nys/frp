@@ -30,4 +30,9 @@ frpc.exe -s 密文
 ![image-20240430222152068](https://nuthecz.oss-cn-hangzhou.aliyuncs.com/file/202404302230300.png)
 
 
-修改了frp的流量特征
+## 注意事项
+
+这里kcp指定的协议是udp  在使用过程中如果运行不了就代表udp端口没开 我们就得用默认的tcp  然后在代码中修改
+
+![image-20240511212631412](https://nuthecz.oss-cn-hangzhou.aliyuncs.com/file/202405112127978.png
+)
