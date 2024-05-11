@@ -32,7 +32,7 @@ frpc.exe -s 密文
 
 ## 注意事项
 
-这里kcp指定的协议是udp  在使用过程中如果运行不了就代表udp端口没开 我们就得用默认的tcp  然后在代码中修改
+这里kcp指定的协议是udp  在使用过程中如果运行不了就代表udp端口没开 我们就得用默认的tcp  然后在代码中修改 `pkg/config/value.go`
 
 ![image-20240511212631412](https://nuthecz.oss-cn-hangzhou.aliyuncs.com/file/202405112127978.png
 )
