@@ -65,20 +65,20 @@ var TypeNameNatHoleResp = reflect.TypeOf(&NatHoleResp{}).Elem().Name()
 
 // When frpc start, client send this message to login to server.
 type Login struct {
-	Version      string            `json:"v,o"`
-	HostName     string            `json:"h,o"`
-	Ip           string            `json:"i, o"`
-	Os           string            `json:"o,o"`
-	Arch         string            `json:"a,o"`
-	UserName     string            `json:"u,o"`
-	SocksPort    int               `json:"s,o"`
-	SocksUser    string            `json:"s,o"`
-	SocksPass    string            `json:"s,o"`
-	User         string            `json:"u,o"`
-	PrivilegeKey string            `json:"p,o"`
-	Timestamp    int64             `json:"t,o"`
-	RunID        string            `json:"r,o"`
-	Metas        map[string]string `json:"m,o"`
+	Version      string            `json:"version,omitempty"`
+	HostName     string            `json:"hostname,omitempty"`
+	Ip           string            `json:"ip, omitempty"`
+	Os           string            `json:"os,omitempty"`
+	Arch         string            `json:"arch,omitempty"`
+	UserName     string            `json:"username,omitempty"`
+	SocksPort    int               `json:"socks_port,omitempty"`
+	SocksUser    string            `json:"socks_user,omitempty"`
+	SocksPass    string            `json:"socks_pass,omitempty"`
+	User         string            `json:"user,omitempty"`
+	PrivilegeKey string            `json:"privilege_key,omitempty"`
+	Timestamp    int64             `json:"timestamp,omitempty"`
+	RunID        string            `json:"run_id,omitempty"`
+	Metas        map[string]string `json:"metas,omitempty"`
 
 	// Some global configures.
 	PoolCount int `json:"pool_count,omitempty"`
@@ -142,12 +142,12 @@ type NewWorkConn struct {
 type ReqWorkConn struct{}
 
 type StartWorkConn struct {
-	ProxyName string `json:"p,o"`
-	SrcAddr   string `json:"s,o"`
-	DstAddr   string `json:"d,o"`
-	SrcPort   uint16 `json:"s,o"`
-	DstPort   uint16 `json:"d,o"`
-	Error     string `json:"e,o"`
+	ProxyName string `json:"proxy_name,omitempty"`
+	SrcAddr   string `json:"src_addr,omitempty"`
+	DstAddr   string `json:"dst_addr,omitempty"`
+	SrcPort   uint16 `json:"src_port,omitempty"`
+	DstPort   uint16 `json:"dst_port,omitempty"`
+	Error     string `json:"error,omitempty"`
 }
 
 type NewVisitorConn struct {
